@@ -16,7 +16,14 @@ namespace LinkedListImplementation
     /// </summary>
     public class LinkedList
     {
+        /// <summary>
+        /// The head
+        /// </summary>
         public Node<T> head;
+
+        /// <summary>
+        /// The tail
+        /// </summary>
         public Node<T> tail;
         public LinkedList()
         {
@@ -24,11 +31,7 @@ namespace LinkedListImplementation
             this.tail = this.head;
         }
 
-        /// <summary>
-        /// Adds the Node.
-        /// </summary>
-        /// <param name="data">The data.</param>
-        public void AddNode(T data)
+        public void PushBack(T data)
         {
             if (this.head == null)
             {
@@ -40,6 +43,20 @@ namespace LinkedListImplementation
             Node<T> temp = new Node<T>(data);
             this.tail.next = temp;
             this.tail = temp;
+        }
+
+        public void PushFront(T data)
+        {
+            if (this.head == null)
+            {
+                this.head = new Node<T>(data);
+                this.tail = this.head;
+                return;
+            }
+
+            Node<T> temp = new Node<T>(data);
+            temp.next = this.head;
+            this.head = temp;
         }
 
         /// <summary>
