@@ -31,6 +31,10 @@ namespace LinkedListImplementation
             this.tail = this.head;
         }
 
+        /// <summary>
+        /// Pushes the Node at the back of LinkedList.
+        /// </summary>
+        /// <param name="data">The data.</param>
         public void PushBack(T data)
         {
             if (this.head == null)
@@ -45,6 +49,10 @@ namespace LinkedListImplementation
             this.tail = temp;
         }
 
+        /// <summary>
+        /// Pushes the Node at the front of LinkedList.
+        /// </summary>
+        /// <param name="data">The data.</param>
         public void PushFront(T data)
         {
             if (this.head == null)
