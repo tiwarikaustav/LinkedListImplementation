@@ -20,9 +20,9 @@ namespace LinkedListImplementation
             linkedList.Traverse();
             linkedList.PushBack(56);
             linkedList.Traverse();
-            linkedList.PushBack(30);
-            linkedList.Traverse();
             linkedList.PushBack(70);
+            linkedList.Traverse();
+            linkedList.PushAtIndex(1, 30);
             linkedList.Traverse();
         }
     }

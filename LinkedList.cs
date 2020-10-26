@@ -68,6 +68,31 @@ namespace LinkedListImplementation
         }
 
         /// <summary>
+        /// Pushes Node at given index.
+        /// </summary>
+        /// <param name="index">The index.</param>
+        /// <param name="data">The data.</param>
+        public void PushAtIndex(int index, T data)
+        {
+            if (this.head == null)
+            {
+                this.head = new Node<T>(data);
+                this.tail = this.head;
+                return;
+            }
+
+            Node<T> node = this.head;
+            for (int i = 0; i < index - 1; i++)
+            {
+                node = node.next;
+            }
+
+            Node<T> temp = new Node<T>(data);
+            temp.next = node.next;
+            node.next = temp;
+        }
+
+        /// <summary>
         /// Traverses this instance.
         /// </summary>
         public void Traverse()
