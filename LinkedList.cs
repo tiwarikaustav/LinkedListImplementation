@@ -161,5 +161,26 @@ namespace LinkedListImplementation
 
             Console.WriteLine();
         }
+
+        /// <summary>
+        /// Searches the specified data.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <returns></returns>
+        public int Search(T data)
+        {
+            Node<T> temp = this.head;
+            int index = 0;
+            while (temp != null)
+            {
+                if (temp.data.Equals(data))
+                {
+                    return index;
+                }
+                temp = temp.next;
+                index++;
+            }
+            return -1;
+        }
     }
 }
