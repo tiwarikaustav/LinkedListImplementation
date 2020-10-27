@@ -105,6 +105,47 @@ namespace LinkedListImplementation
             this.head = this.head.next;
         }
 
+        /// <summary>
+        /// Counts number of Nodes.
+        /// </summary>
+        /// <returns></returns>
+        public int Count()
+        {
+            int count = 0;
+            Node<T> node = head;
+            while (node != null)
+            {
+                node = node.next;
+                count++;
+            }
+            return count;
+        }
+
+        /// <summary>
+        /// Delete the Node at end.
+        /// </summary>
+        public void PopBack()
+        {
+            if (this.head == null)
+            {
+                return;
+            }
+
+            Node<T> node = head;
+            int length = Count();
+            if (length <= 1)
+            {
+                this.head = null;
+                this.tail = this.head;
+                return;
+            }
+            for (int i = 1; i < length - 1; i++)
+            {
+                node = node.next;
+            }
+            node.next = null;
+            tail = node;
+        }
 
         /// <summary>
         /// Traverses this instance.

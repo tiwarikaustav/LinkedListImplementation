@@ -22,9 +22,11 @@ namespace LinkedListImplementation
             linkedList.Traverse();
             linkedList.PushBack(70);
             linkedList.Traverse();
-            linkedList.PushAtIndex(1, 30);
+            linkedList.PopBack();
             linkedList.Traverse();
-            linkedList.PopFront();
+            linkedList.PushAtIndex(0, 30);
+            linkedList.Traverse();
+            linkedList.PopBack();
             linkedList.Traverse();
         }
     }
